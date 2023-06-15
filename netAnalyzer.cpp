@@ -1,5 +1,7 @@
 #include "netAnalyzer.h"
 
+#include <algorithm>
+
 constexpr int ANALYZE_NUMBER = 10;
 constexpr int PROXY_MIN_NUMBER = 2;
 
