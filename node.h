@@ -4,6 +4,7 @@
 #include <array>
 #include <unordered_set>
 #include <vector>
+#include <cstddef>
 
 constexpr int IP_ADDRESS_LENGTH = 4;
 constexpr int MAC_ADDRESS_LENGTH = 6;
