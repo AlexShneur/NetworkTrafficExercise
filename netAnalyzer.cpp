@@ -15,10 +15,9 @@ auto sortBySessionsCount = [](const Node& n1, const Node& n2) -> bool
     return n1.SessionsCount < n2.SessionsCount;
 };
 
-template<int length>
-std::ostream& operator<<(std::ostream& os, const std::array<int, length>& arr)
+std::ostream& operator<<(std::ostream& os, const std::array<int, IP_ADDRESS_LENGTH>& arr)
 {
-    for (auto i = 0; i < length-1; ++i)
+    for (auto i = 0; i < IP_ADDRESS_LENGTH -1; ++i)
     {
         os << arr[i] << ".";
     }
@@ -31,7 +30,7 @@ auto operator==(const Node::IP_To_Protocol& pair1, const Node::IP_To_Protocol& p
     return pair1.first == pair2.first && pair1.second == pair2.second;
 }
 
-void NetAnalyzer::Analyze(std::string_view filename)
+void NetAnalyzer::Analyze(const std::string& filename)
 {
     std::ifstream file(filename);
 

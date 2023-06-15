@@ -15,7 +15,7 @@ public:
 
     NetAnalyzer() = default;
 
-    void Analyze(std::string_view filename);
+    void Analyze(const std::string& filename);
 
     template<int length>
     std::array<int, length> GetAddress(const std::vector<std::string>& addr) const;
